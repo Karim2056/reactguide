@@ -1,0 +1,32 @@
+.hero-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 128px;
+
+  background: radial-gradient(
+    ellipse 25% 70% at 50% 100%,
+    rgba(137, 32, 252, 1) 0%,
+    rgba(137, 32, 252, 0.5) 40%,
+    rgba(137, 32, 252, 0) 100%
+  );
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > h1 {
+    font-weight: 800;
+    font-size: 128px;
+  }
+
+  > h2 {
+    font-size: 32px;
+    font-weight: 800;
+  }
+}
+

@@ -19,6 +19,16 @@ html {
   gap: 128px;
 }
 
+.props-row {
+  display: flex;
+  gap: 16px;
+}
+
+.chips-example {
+  display: flex;
+  gap: 16px;
+}
+
 @media only screen and (max-width: 1000px) {
   .all-sections {
     padding: 128px 64px;

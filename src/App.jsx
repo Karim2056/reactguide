@@ -5,7 +5,7 @@ import Card from "./components/Card/Card";
 import Chip from "./components/Chip/Chip";
 import xIcon from "./assets/icons/X.png"
 import CodeBlock from "./components/CodeBlock/CodeBlock";
-import {chipComponentCode, chipUsageCode } from "./CodeSnippets";
+import { chipComponentCode, chipUsageCode } from "./CodeSnippets";
 
 function App() {
   return (
@@ -14,7 +14,16 @@ function App() {
       <main className="main-content">
         <HeroBanner />
         <div className="all-sections">
-          <section className="props-section">
+          <PropsSection/>
+        </div>
+      </main>
+    </>
+  );
+}
+
+function PropsSection(){
+  return(
+    <section className="props-section">
             <div className="props-row">
               <Card highlighted>
                 <h2>Props</h2>
@@ -38,27 +47,21 @@ function App() {
                 </div>
               </Card>
             </div>
-            <Card>
-              <div className="component-internals">
-                <CodeBlock
-                  language="jsx"
-                  title="Component Internals"
-                  code={chipComponentCode}/>
-              </div>
-              <div className="usage-example">
-                <CodeBlock
-                  language="jsx"
-                  title="Usage Example"
-                  code={chipUsageCode}
-                />
-              </div>
+            <Card isRow>
+              <CodeBlock
+                language="jsx"
+                title="Component Internals"
+                code={chipComponentCode} />
+                <div className="vertical-line"></div>
+              <CodeBlock
+                language="jsx"
+                title="Usage Example"
+                code={chipUsageCode}
+              />
             </Card>
           </section>
 
-        </div>
-      </main>
-    </>
-  );
+  )
 }
 
 export default App;

@@ -25,3 +25,9 @@
         font-size: 64px;
     }
 }
+
+.card.row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}

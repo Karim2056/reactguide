@@ -1,9 +1,14 @@
 import "./Card.css"
 
-export default function Card({highlighted = false, children}) {
+export default function Card({highlighted = false, isRow = false, children}) {
+
+    let classString = "card";
+    if(highlighted){classString += " highlighted"}
+    if(isRow){classString += " row"}
+
 
     return(
-        <div className={highlighted ? "card highlighted" : "card"}>
+        <div className={classString}>
             {children}
         </div>
     )

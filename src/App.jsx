@@ -3,7 +3,9 @@ import Header from "./components/Header/Header";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
 import Card from "./components/Card/Card";
 import Chip from "./components/Chip/Chip";
-import xIcon from"./assets/icons/X.png"
+import xIcon from "./assets/icons/X.png"
+import CodeBlock from "./components/CodeBlock/CodeBlock";
+import {chipComponentCode, chipUsageCode } from "./CodeSnippets";
 
 function App() {
   return (
@@ -35,8 +37,22 @@ function App() {
                   <Chip text="icon test" icon={xIcon}></Chip>
                 </div>
               </Card>
-
             </div>
+            <Card>
+              <div className="component-internals">
+                <CodeBlock
+                  language="jsx"
+                  title="Component Internals"
+                  code={chipComponentCode}/>
+              </div>
+              <div className="usage-example">
+                <CodeBlock
+                  language="jsx"
+                  title="Usage Example"
+                  code={chipUsageCode}
+                />
+              </div>
+            </Card>
           </section>
 
         </div>

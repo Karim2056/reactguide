@@ -1,0 +1,25 @@
+.accordion-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+
+    > img {
+        height: 12px;
+    }
+    > img.closed {
+        transform: rotateZ(180deg);
+    }
+}
+
+.line {
+    background-color: var(--card-stroke);
+    height: 2px;
+    flex: 1;
+}
+
+.line.short {
+    max-width: 16px;
+}

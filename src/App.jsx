@@ -6,6 +6,7 @@ import Chip from "./components/Chip/Chip";
 import xIcon from "./assets/icons/X.png"
 import CodeBlock from "./components/CodeBlock/CodeBlock";
 import { chipComponentCode, chipUsageCode } from "./CodeSnippets";
+import Accordion from "./components/Accordion/Accordion";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <HeroBanner />
         <div className="all-sections">
           <PropsSection/>
+          <StateSection/>
         </div>
       </main>
     </>
@@ -61,6 +63,25 @@ function PropsSection(){
             </Card>
           </section>
 
+  )
+}
+
+
+
+function StateSection() {
+  return (
+    <section className="props-section">
+      <Card highlighted>
+        <h2>State</h2>
+        <p>State is very similar to a variable, with one key difference.</p>
+        <p>When state changes, react will notice, and re-draw the part of the page that uses the state.</p>
+      </Card>
+      <Card tags={["test", "temp", "Conditional Rendering"]}>
+        <Accordion title="click me pls">
+          <p>heya</p>
+        </Accordion>
+      </Card>
+    </section>
   )
 }
 

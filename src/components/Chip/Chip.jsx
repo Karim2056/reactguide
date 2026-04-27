@@ -1,11 +1,24 @@
 import "./Chip.css"
 
-export default function Chip({text, isHighlighted, icon}) {
+export default function Chip({ highlighted = false, row = false, tag = [], children }) {
 
+    let classString = "card";
+    if (highlighted) { classString += " highlighted" }
+    if (row) { classString += " row" }
+ 
+    let tagsComponent = tag.map((tag) => {
+        return <Chip text={tag} />
+    })
+ 
     return (
-        <div className={isHighlighted ? "chip highlighted" : "chip"}>
-            <p>{text}</p>
-            {icon ? <img width={20} src={icon}/> : null}
+        <div className={classString}>
+            {
+                tagsComponent
+                    ? <div className="tags-row">
+                        Uses: {tagsComponent}
+                    </div>
+                    : null
+            }
         </div>
     )
 }
